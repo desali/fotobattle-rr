@@ -1,0 +1,35 @@
+User:
+  id:integer
+  username:string
+  fullname:string
+  email:string
+  city:string
+  birthdate:date
+  gender:boolean
+  password_digest:string
+  status:text
+  coins:integer
+
+  avatar: attachment
+  background: attachment
+
+
+  --- --- --- DO NOT NEED --- --- ---
+
+Post:
+  body:text
+  image:string
+  user_id:integer
+  likes_count:integer
+
+Like
+  post_id:integer
+  user_id:integer
+
+Comment:
+  body:text
+  post_id:integer
+  user_id:integer
+
+Followers:
+  TBD
