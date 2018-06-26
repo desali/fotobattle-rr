@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :email
       t.string :city
       t.date :birthdate
-      t.boolean :gender
+      t.string :gender
       t.text :status, default: ""
       t.integer :coins, default: 0
 

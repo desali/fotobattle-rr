@@ -19,6 +19,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.1.1'
 gem "font-awesome-rails"
+gem 'bootstrap-datepicker-rails'
+
 # Custom End
 
 # Use Uglifier as compressor for JavaScript assets

@@ -1,5 +1,60 @@
-<h1>New User</h1>
+<div class="container py-5">
+  <div class="row">
+    <h1 class="col-12 text-center">New User</h1>
+  </div>
 
-<%= render 'form', user: @user %>
+  <div class="row">
+    <div class="col-6 m-auto">
+
+      <%= form_for @user do |form| %>
+        <%= render 'shared/error_messages' %>
+
+        <div class="form-group">
+          <%= form.label :username %>
+          <%= form.text_field :username, class: 'form-control', placeholder: 'Enter username' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :fullname %>
+          <%= form.text_field :fullname, class: 'form-control', placeholder: 'Enter fullname' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :email %>
+          <%= form.text_field :email, class: 'form-control', placeholder: 'Enter email' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :city %>
+          <%= form.select :city, City.all.collect {|c| [c.name, c.name]}, {:include_blank => "Select your city"}, {:class => "form-control"} %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :birthdate %>
+          <%= datepicker_input form, :birthdate%>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :gender %><br>
+          <span class="option">Male<span><%= form.radio_button :gender, "m" %></br>
+          <span class="option">Female<span><%= form.radio_button :gender, "f" %></br>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :password %>
+          <%= form.password_field :password, class: 'form-control', placeholder: 'Enter password' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :password_confirmation %>
+          <%= form.password_field :password_confirmation, class: 'form-control', placeholder: 'Confirm password' %>
+        </div>
+
+        <%= form.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
 
 <%= link_to 'Back', users_path %>

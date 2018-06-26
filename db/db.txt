@@ -1,9 +1,9 @@
 User:
   id:integer
+
   username:string
   fullname:string
   email:string
-  city:string
   birthdate:date
   gender:boolean
   password_digest:string
@@ -13,6 +13,12 @@ User:
   avatar: attachment
   background: attachment
 
+  ???
+  city:string
+
+City:
+  id:integer
+  name:string
 
   --- --- --- DO NOT NEED --- --- ---
 

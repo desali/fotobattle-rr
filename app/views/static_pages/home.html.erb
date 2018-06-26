@@ -1,5 +1,14 @@
 <% provide(:title, "Home") %>
 
-<h1>Home Page</h1>
-<p>Are you new here?</p>
-<%= link_to "Join now!", signup_path, class: "btn btn-success" %>
+<div class="container py-5">
+  <div class="row">
+    <h1 class="col-12 text-center">Home Page</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-6 m-auto">
+      <p>Are you new here?</p>
+      <%= link_to "Join now!", signup_path, class: "btn btn-success" %>
+    </div>
+  </div>
+</div>
